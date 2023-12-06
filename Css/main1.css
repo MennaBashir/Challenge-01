@@ -1,0 +1,157 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  container {
+    padding-right: 15px;
+    padding-left: 15px;
+    /* padding is nessary علشان ميبدءش من اول صفحه فى شاشات تلفون */
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh
+  }
+  /* Small Screen */
+  @media (min-width: 768px) {
+    container {
+      width: 750px;
+    }
+  }
+  /* Medium Screen */
+  @media (min-width: 992px) {
+    container {
+      width: 970px;
+    }
+  }
+  /* Large Screen */
+  @media (min-width: 1200px) {
+    container {
+      width: 1170px;
+    }
+  }
+  /* End Global rules */
+  container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: #f3eae3;
+  }
+  container main{
+    display: flex;
+
+  }
+ 
+  container .img {
+    width: 200px;
+    border-radius: 10px 0 0 10px;
+    height: 325px;
+    background-image: url("../images/image-product-desktop.jpg");
+  background-size: cover;
+  }
+  main .txt{
+    width: 200px;
+    border-radius: 0 10px 10px 0;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 325px;
+
+  }
+  main .txt > span{
+    font-size: 15px;
+    color: #b7b6bb;
+  }
+  main .txt > span + h3{
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  main .txt p{
+    color: #807f85;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+main .txt .pric{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+main .txt .pric > h3{
+  color: #437c68;
+  font-size: 33px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+main .txt .pric > h3 + del{
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  color: #929199;
+  font-size: 13px;
+}
+main .txt .add{
+  position: relative;
+}
+main .txt .add::before{
+  content: "\f07a";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  color: white;
+  bottom: 10px;
+  left: 27px;
+  font-size: 13px;
+  
+
+}
+main .txt .add button{
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 35px;
+  border: none;
+  color: white;
+  background-color: #3d8168;
+  font-size: 13px;
+}
+main .txt .add button:hover{
+  background-color: #1a4031;
+
+}
+@media(max-width:450px){
+  container {
+    min-height: 400px;
+    height: auto;
+}
+container main {
+  flex-direction: column;
+}container .img {
+  background-image: url(../images/image-product-mobile.jpg);
+  width: 325px;
+  margin-top: 20px;
+  border-radius: 10px 10px 0 0;
+  height: 260px;
+}
+main .txt {
+  width: 325px;
+  border-radius: 0 0 10px 10px;
+  height: 325px;
+  margin-bottom: 20px;
+}
+main .txt p {
+  font-size: 18px;
+  line-height: 1.3;
+}
+main .txt .add::before {
+  left: 85px;
+}
+main .txt .pric > h3 + del {
+  right: 125px;
+}
+}
